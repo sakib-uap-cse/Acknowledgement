@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dataset Contributors | Acknowledgement</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="Image/png" href="Images/logo.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+
+            background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+            color: white;
+
+        }
+
+        .top-links {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            padding: 22px 20px 0;
+
+        }
+
+        .top-link-btn {
+
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .2);
+            background: rgba(255, 255, 255, .07);
+            backdrop-filter: blur(10px);
+            transition: .3s;
+
+        }
+
+        .top-link-btn:hover {
+
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .35);
+
+        }
+
+        .top-link-btn.conf {
+
+            border-color: rgba(37, 99, 235, .5);
+
+        }
+
+        .top-link-btn.conf:hover {
+
+            background: rgba(37, 99, 235, .25);
+
+        }
+
+        .top-link-btn.journal {
+
+            border-color: rgba(147, 51, 234, .5);
+
+        }
+
+        .top-link-btn.journal:hover {
+
+            background: rgba(147, 51, 234, .25);
+
+        }
+
+        .top-link-btn.dataset {
+
+            border-color: rgba(74, 222, 128, .5);
+
+        }
+
+        .top-link-btn.dataset:hover {
+
+            background: rgba(74, 222, 128, .25);
+
+        }
+
+        header {
+
+            padding: 60px 20px;
+            text-align: center;
+
+        }
+
+        header h1 {
+
+            font-size: 42px;
+            margin-bottom: 15px;
+
+        }
+
+        header p {
+
+            font-size: 18px;
+            opacity: .85;
+            max-width: 850px;
+            margin: auto;
+
+        }
+
+        /* ---- Authors & Supervisors ---- */
+
+        .team-section {
+
+            padding: 10px 20px 20px;
+
+        }
+
+        .team-group {
+
+            max-width: 1200px;
+            margin: 0 auto 40px;
+
+        }
+
+        .team-group-title {
+
+            text-align: center;
+            font-size: 15px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            opacity: .6;
+            margin-bottom: 22px;
+
+        }
+
+        .team-row {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+
+        }
+
+        .team-card {
+
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .12);
+            backdrop-filter: blur(15px);
+            padding: 28px 22px;
+            border-radius: 20px;
+            width: 250px;
+            text-align: center;
+            transition: .4s;
+
+        }
+
+        .team-card:hover {
+
+            transform: translateY(-6px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .35);
+
+        }
+
+        .team-card.lead {
+
+            width: 270px;
+            border-color: rgba(74, 222, 128, .4);
+
+        }
+
+        .avatar {
+
+            width: 96px;
+            height: 96px;
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            font-weight: 600;
+            background: linear-gradient(135deg, #2563eb, #9333ea);
+            border: 3px solid rgba(255, 255, 255, .15);
+            overflow: hidden;
+
+        }
+
+        .team-card.lead .avatar {
+
+            width: 108px;
+            height: 108px;
+            border-color: rgba(74, 222, 128, .5);
+            background: linear-gradient(135deg, #16a34a, #2563eb);
+
+        }
+
+        .avatar img {
+
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+        .team-name {
+
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 6px;
+
+        }
+
+        .team-role {
+
+            font-size: 12px;
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(74, 222, 128, .18);
+            color: #4ade80;
+            margin-bottom: 12px;
+            font-weight: 500;
+
+        }
+
+        .team-card .info {
+
+            font-size: 13px;
+            opacity: .85;
+            margin: 3px 0;
+
+        }
+
+        .team-card .email {
+
+            font-size: 12px;
+            color: #93c5fd;
+            word-break: break-all;
+            margin-top: 8px;
+            display: inline-block;
+            text-decoration: none;
+            cursor: pointer;
+
+        }
+
+        .team-card .email:hover {
+
+            text-decoration: underline;
+
+        }
+
+        .stats {
+
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+            padding: 30px;
+
+        }
+
+        .stat {
+
+            background: rgba(255, 255, 255, .08);
+            backdrop-filter: blur(12px);
+            padding: 25px;
+            width: 220px;
+            border-radius: 18px;
+            text-align: center;
+
+        }
+
+        .stat h2 {
+
+            font-size: 38px;
+            color: #4ade80;
+
+        }
+
+        .stat-btn {
+
+            margin-top: 14px;
+            background: rgba(74, 222, 128, .15);
+            border: 1px solid rgba(74, 222, 128, .5);
+            color: #4ade80;
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: .3s;
+
+        }
+
+        .stat-btn:hover {
+
+            background: rgba(74, 222, 128, .3);
+
+        }
+
+        /* ---- Circular region selector ---- */
+
+        .wheel-section {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 20px 10px;
+
+        }
+
+        .wheel-title {
+
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            opacity: .9;
+
+        }
+
+        .wheel {
+
+            position: relative;
+            width: 320px;
+            height: 320px;
+            margin-bottom: 10px;
+
+        }
+
+        .wheel::before {
+
+            content: '';
+            position: absolute;
+            inset: 40px;
+            border-radius: 50%;
+            border: 1px dashed rgba(255, 255, 255, .2);
+
+        }
+
+        .region-node {
+
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 8px;
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .18);
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: .3s;
+            transform: translate(-50%, -50%);
+            line-height: 1.2;
+
+        }
+
+        .region-node:hover {
+
+            background: rgba(37, 99, 235, .35);
+            border-color: #2563eb;
+            transform: translate(-50%, -50%) scale(1.08);
+
+        }
+
+        .region-node.active {
+
+            background: #2563eb;
+            border-color: #2563eb;
+            box-shadow: 0 0 25px rgba(37, 99, 235, .6);
+
+        }
+
+        .region-center {
+
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, .1);
+            border: 2px solid rgba(74, 222, 128, .6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 10px;
+            transition: .3s;
+
+        }
+
+        .region-center:hover {
+
+            background: rgba(74, 222, 128, .2);
+
+        }
+
+        .region-center.active {
+
+            background: #16a34a;
+            border-color: #16a34a;
+
+        }
+
+        .wheel-hint {
+
+            font-size: 13px;
+            opacity: .6;
+            margin-bottom: 30px;
+
+        }
+
+        .search {
+
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+
+        }
+
+        .search input {
+
+            width: 420px;
+            max-width: 90%;
+            padding: 15px;
+            border: none;
+            outline: none;
+            border-radius: 40px;
+            font-size: 16px;
+
+        }
+
+        .container {
+
+            max-width: 1500px;
+            margin: auto;
+            padding: 30px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+
+        }
+
+        .card {
+
+            background: rgba(255, 255, 255, .08);
+            border: 1px solid rgba(255, 255, 255, .12);
+            backdrop-filter: blur(15px);
+            padding: 25px;
+            border-radius: 20px;
+            transition: .4s;
+
+        }
+
+        .card:hover {
+
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .35);
+
+        }
+
+        .name {
+
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 10px;
+
+        }
+
+        .info {
+
+            margin: 8px 0;
+            font-size: 15px;
+
+        }
+
+        .badges {
+
+            margin-top: 15px;
+
+        }
+
+        .badge {
+
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 4px;
+            font-size: 13px;
+            font-weight: 500;
+
+        }
+
+        .region {
+
+            background: #2563eb;
+
+        }
+
+        .category {
+
+            background: #9333ea;
+            cursor: help;
+
+        }
+
+        .uni {
+
+            background: #16a34a;
+
+        }
+
+        .job {
+
+            background: #ea580c;
+
+        }
+
+        .empty-msg {
+
+            text-align: center;
+            padding: 60px 20px;
+            opacity: .6;
+            font-size: 16px;
+            display: none;
+
+        }
+
+        footer {
+
+            text-align: center;
+            padding: 50px 20px;
+            opacity: .8;
+
+        }
+
+        /* ---- Modal ---- */
+
+        .modal-overlay {
+
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, .6);
+            backdrop-filter: blur(4px);
+            z-index: 100;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+
+        }
+
+        .modal-overlay.open {
+
+            display: flex;
+
+        }
+
+        .modal-box {
+
+            background: #1e293b;
+            border: 1px solid rgba(255, 255, 255, .15);
+            border-radius: 20px;
+            max-width: 480px;
+            width: 100%;
+            max-height: 80vh;
+            overflow-y: auto;
+            padding: 30px;
+            position: relative;
+
+        }
+
+        .modal-box h3 {
+
+            margin-bottom: 20px;
+            font-size: 22px;
+            color: #4ade80;
+
+        }
+
+        .modal-close {
+
+            position: absolute;
+            top: 18px;
+            right: 22px;
+            font-size: 22px;
+            cursor: pointer;
+            opacity: .7;
+
+        }
+
+        .modal-close:hover {
+
+            opacity: 1;
+
+        }
+
+        .modal-list {
+
+            list-style: none;
+
+        }
+
+        .modal-list li {
+
+            padding: 12px 14px;
+            margin-bottom: 8px;
+            background: rgba(255, 255, 255, .06);
+            border-radius: 12px;
+            font-size: 15px;
+            display: flex;
+            gap: 10px;
+            cursor: default;
+
+        }
+
+        .modal-list li span.num {
+
+            color: #4ade80;
+            font-weight: 600;
+            min-width: 22px;
+
+        }
+
+        .modal-list li.clickable {
+
+            cursor: pointer;
+            transition: .25s;
+
+        }
+
+        .modal-list li.clickable:hover {
+
+            background: rgba(37, 99, 235, .35);
+
+        }
+
+        @media (max-width: 420px) {
+
+            .wheel {
+                transform: scale(0.85);
+            }
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="top-links">
+
+        <a class="top-link-btn conf" href="#" target="_blank" rel="noopener">📄 Conference Paper</a>
+
+        <a class="top-link-btn journal" href="#" target="_blank" rel="noopener">📘 Dataset Paper (Journal)</a>
+
+        <a class="top-link-btn dataset" href="https://data.mendeley.com/datasets/777wsgjgtm/1" target="_blank" rel="noopener">🔗 Dataset Link</a>
+
+    </div>
+
+    <header>
+
+        <h1>Dataset Contributors Acknowledgement</h1>
+
+        <p>
+
+            We sincerely thank all volunteers, students, researchers, professionals,
+            and contributors who generously participated in the speech data collection
+            process. Their valuable time and effort made this dataset possible.
+
+        </p>
+
+    </header>
+
+    <section class="team-section">
+
+        <div class="team-group">
+
+            <div class="team-group-title">Supervision</div>
+
+            <div class="team-row" id="supervisors"></div>
+
+        </div>
+
+        <div class="team-group">
+
+            <div class="team-group-title">Authors</div>
+
+            <div class="team-row" id="authors"></div>
+
+        </div>
+
+    </section>
+
+    <section class="stats">
+
+        <div class="stat">
+
+            <h2>49</h2>
+
+            <p>Contributors</p>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>5</h2>
+
+            <p>Regional Dialects</p>
+
+            <button class="stat-btn" onclick="openModal('region')">View List</button>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>19</h2>
+
+            <p>Speech Categories</p>
+
+            <button class="stat-btn" onclick="openModal('category')">View List</button>
+
+        </div>
+
+        <div class="stat">
+
+            <h2>8+</h2>
+
+            <p>Universities & Organizations</p>
+
+        </div>
+
+    </section>
+
+    <section class="wheel-section">
+
+        <div class="wheel-title">Browse Contributors by Region</div>
+
+        <div class="wheel" id="wheel">
+
+            <div class="region-center active" id="centerNode" onclick="selectRegion(null)">All<br>Regions</div>
+
+        </div>
+
+        <div class="wheel-hint">Tap a region on the wheel to filter contributors below</div>
+
+    </section>
+
+    <div class="search">
+
+        <input type="text" id="search" placeholder="Search contributor..." onkeyup="searchCard()">
+
+    </div>
+
+    <div class="container" id="cards">
+
+    </div>
+
+    <div class="empty-msg" id="emptyMsg">No contributors match your filters.</div>
+
+    <footer>
+
+        © 2026 Regional Bangla Speech Dataset Project
+
+    </footer>
+
+    <!-- Modal -->
+
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
+
+        <div class="modal-box">
+
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+
+            <h3 id="modalTitle"></h3>
+
+            <ul class="modal-list" id="modalList"></ul>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // ---- Authors & Supervisors ----
+        // To use a real photo, just fill in "image" with an image URL/path,
+        // e.g. image: "images/nasima.jpg" — leave "" to keep the initials avatar.
+
+        const supervisors = [
+
+            {
+                name: "Prof. Dr. Nasima Begum",
+                role: "Supervisor",
+                dept: "Department of Computer Science and Engineering",
+                uni: "University of Asia Pacific",
+                location: "Dhaka, Bangladesh",
+                email: "nasima.cse@uap-bd.edu",
+                image: "Images/DNB1.0.jpg"
+            },
+
+            {
+                name: "Tasnim Jahin Mowla",
+                role: "Co-Supervisor",
+                dept: "Department of Computer Science and Engineering",
+                uni: "University of Asia Pacific",
+                location: "Dhaka, Bangladesh",
+                email: "tasnim.jahin@uap-bd.edu",
+                image: "Images/pic.png"
+            }
+
+        ];
+
+        const authors = [
+
+            {
+                name: "M Sakib Rahman",
+                role: "Author",
+                dept: "Department of Computer Science and Engineering",
+                uni: "University of Asia Pacific",
+                location: "Dhaka, Bangladesh",
+                email: "22201240@uap-bd.edu",
+                image: "Images/IMG_9270 9.jpg"
+            },
+
+            {
+                name: "Sharier Alam Shimul",
+                role: "Author",
+                dept: "Department of Computer Science and Engineering",
+                uni: "University of Asia Pacific",
+                location: "Dhaka, Bangladesh",
+                email: "22201227@uap-bd.edu",
+                image: ""
+            },
+
+            {
+                name: "Salman Nur Ramim",
+                role: "Author",
+                dept: "Department of Computer Science and Engineering",
+                uni: "University of Asia Pacific",
+                location: "Dhaka, Bangladesh",
+                email: "22201239@uap-bd.edu",
+                image: ""
+            }
+
+        ];
+
+        function initials(name) {
+
+            return name
+
+                .replace(/^(Prof\.|Dr\.|Md\.)\s*/gi, "")
+                .split(" ")
+                .filter(Boolean)
+                .slice(0, 2)
+                .map(w => w[0])
+                .join("")
+                .toUpperCase();
+
+        }
+
+        function renderTeam(list, containerId, cardClass) {
+
+            const el = document.getElementById(containerId);
+
+            el.innerHTML = list.map(p => `
+
+<div class="team-card ${cardClass}">
+
+<div class="avatar">${p.image ? `<img src="${p.image}" alt="${p.name}">` : initials(p.name)}</div>
+
+<div class="team-name">${p.name}</div>
+
+<div class="team-role">${p.role}</div>
+
+<div class="info">${p.dept}</div>
+
+<div class="info">${p.uni}</div>
+
+<div class="info">${p.location}</div>
+
+<a class="email" href="mailto:${p.email}">${p.email}</a>
+
+</div>
+
+`).join("");
+
+        }
+
+        renderTeam(supervisors, "supervisors", "lead");
+        renderTeam(authors, "authors", "");
+
+        const regions = ["Barishal", "Chittagong", "Noakhali", "Rangpur", "Sylhet"];
+
+        const categories = [
+
+            "Greetings & Introduction",
+            "Asking for Directions & Transportation",
+            "Shopping & Market Conversation",
+            "Food & Restaurant",
+            "Tourist & Travel",
+            "Health & Emergency",
+            "Family & Personal Life",
+            "Agriculture & Rural Life",
+            "Weather & Environment",
+            "Festivals & Culture",
+            "Education",
+            "Work & Office Conversation",
+            "Buying Technology / Products",
+            "Polite Requests & Social Communication",
+            "Daily Activities",
+            "Problems & Complaints",
+            "Banking & Money",
+            "Emotional Expressions",
+            "Traditional Arts & Performances"
+
+        ];
+
+        const contributors = [
+
+            {
+                name: "Abrar Hisam",
+                region: "Barishal",
+                affiliation: "University of Asia Pacific",
+                semester: "2nd Year • 2nd Semester",
+                category: "1,2"
+            },
+
+            {
+                name: "Abdullah As Sami Taseen",
+                region: "Chittagong",
+                affiliation: "University of Asia Pacific",
+                semester: "2nd Year • 1st Semester",
+                category: "16,17"
+            },
+
+            {
+                name: "Mizanur Rahman (Sowrov)",
+                region: "Noakhali",
+                affiliation: "University of Asia Pacific",
+                semester: "2nd Year • 1st Semester",
+                category: "15,16"
+            },
+
+            {
+                name: "Abidur Rahman Shaan",
+                region: "Noakhali",
+                affiliation: "University of Asia Pacific",
+                semester: "2nd Year • 2nd Semester",
+                category: "3,15"
+            },
+
+            {
+                name: "Shahariar Arabin",
+                region: "Rangpur",
+                affiliation: "University of Asia Pacific",
+                semester: "2nd Year • 1st Semester",
+                category: "1,2"
+            },
+
+            {
+                name: "Md. Inan Sadman",
+                region: "Noakhali",
+                affiliation: "University of Asia Pacific",
+                semester: "1st Year • 2nd Semester",
+                category: "6"
+            },
+
+            {
+                name: "Labiba Binte Helal",
+                region: "Barishal",
+                affiliation: "University of Asia Pacific",
+                semester: "2nd Year • 1st Semester",
+                category: "3"
+            },
+
+            {
+                name: "Abdullah Bin Hossain",
+                region: "Chittagong",
+                affiliation: "University of Asia Pacific",
+                semester: "4th Year • 1st Semester",
+                category: "7,8"
+            },
+
+            {
+                name: "MD Mozahidul Islam",
+                region: "Rangpur",
+                affiliation: "BBA Student",
+                semester: "3rd Year",
+                category: "7"
+            },
+
+            {
+                name: "Abdullah Al Jubayer",
+                region: "Noakhali",
+                affiliation: "University of Asia Pacific",
+                semester: "4th Year",
+                category: "11,12"
+            },
+
+            {
+                name: "Shadman",
+                region: "Chittagong",
+                affiliation: "BUET",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Mafuj",
+                region: "Barishal",
+                affiliation: "Daffodil International University",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Firoj",
+                region: "Chittagong",
+                affiliation: "IUBAT",
+                semester: "1st Year"
+            },
+
+            {
+                name: "Porag",
+                region: "Sylhet",
+                affiliation: "Software Engineer",
+                semester: "Working Professional"
+            },
+
+            {
+                name: "Amin",
+                region: "Rangpur",
+                affiliation: "BBA Student",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "Hasnain",
+                region: "Chittagong",
+                affiliation: "University of Asia Pacific",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Solimullah",
+                region: "Sylhet",
+                affiliation: "University of Kent, UK",
+                semester: "Graduate Student"
+            },
+
+            {
+                name: "Mahmud Hasan Sabbir",
+                region: "Rangpur",
+                affiliation: "Jagannath University",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Prapti Das",
+                region: "Noakhali",
+                affiliation: "Jagannath University",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Safa",
+                region: "Barishal",
+                affiliation: "Jagannath University",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "Sweety",
+                region: "Rangpur",
+                affiliation: "Jagannath University",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "Jhilik",
+                region: "Barishal",
+                affiliation: "Jagannath University",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Sohel",
+                region: "Sylhet",
+                affiliation: "University of Dhaka",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Humaira",
+                region: "Rangpur",
+                affiliation: "University of Dhaka",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Taniya",
+                region: "Barishal",
+                affiliation: "University of Dhaka",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Tanim",
+                region: "Barishal",
+                affiliation: "Alumni, University of Asia Pacific",
+                semester: "Graduate"
+            },
+
+            {
+                name: "Anuva",
+                region: "Sylhet",
+                affiliation: "University of Dhaka",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "Shofiq",
+                region: "Barishal",
+                affiliation: "University of Dhaka",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Saber Riyad",
+                region: "Noakhali",
+                affiliation: "BUET",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Masum Sheikh",
+                region: "Chittagong",
+                affiliation: "BRAC University",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "Morshed Alom",
+                region: "Chittagong",
+                affiliation: "North South University",
+                semester: "4th Year"
+            },
+
+            {
+                name: "MA Mahim",
+                region: "Noakhali",
+                affiliation: "Daffodil International University",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Abdullah Al Rafi",
+                region: "Chittagong",
+                affiliation: "BRAC University",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "MD Juboraj",
+                region: "Chittagong",
+                affiliation: "University of Dhaka",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Mohiuddin",
+                region: "Chittagong",
+                affiliation: "BUET",
+                semester: "Graduate Student"
+            },
+
+            {
+                name: "Shahidul Islam Raihan",
+                region: "Chittagong",
+                affiliation: "Research Assistant",
+                semester: "Working Professional"
+            },
+
+            {
+                name: "Tanvir Islam Tuhin",
+                region: "Chittagong",
+                affiliation: "Software Engineer",
+                semester: "Working Professional"
+            },
+
+            {
+                name: "Atifa",
+                region: "Noakhali",
+                affiliation: "North South University",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "KM Fahim",
+                region: "Noakhali",
+                affiliation: "BRAC University",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Tanvir Alamgir",
+                region: "Noakhali",
+                affiliation: "University of Dhaka",
+                semester: "Graduate Student"
+            },
+
+            {
+                name: "Sohel",
+                region: "Barishal",
+                affiliation: "Jagannath University",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Jati Basu",
+                region: "Rangpur",
+                affiliation: "Pabna University",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Mim",
+                region: "Sylhet",
+                affiliation: "Islamic University",
+                semester: "2nd Year"
+            },
+
+            {
+                name: "Ridwan",
+                region: "Sylhet",
+                affiliation: "BUET",
+                semester: "4th Year"
+            },
+
+            {
+                name: "Rownok Hasan",
+                region: "Rangpur",
+                affiliation: "NITER",
+                semester: "3rd Year"
+            },
+
+            {
+                name: "Tushto",
+                region: "Sylhet",
+                affiliation: "BUET",
+                semester: "Graduate Student"
+            },
+
+            {
+                name: "Shafee",
+                region: "Sylhet",
+                affiliation: "BUET",
+                semester: "Graduate Student"
+            },
+
+            {
+                name: "Nayeem",
+                region: "Rangpur",
+                affiliation: "Data Analyst",
+                semester: "Working Professional"
+            },
+
+            {
+                name: "Mahin",
+                region: "Rangpur",
+                affiliation: "Machine Learning Engineer",
+                semester: "Working Professional"
+            }
+
+        ];
+
+        const cards = document.getElementById("cards");
+        const emptyMsg = document.getElementById("emptyMsg");
+        let activeRegion = null;
+
+        function categoryNames(catString) {
+
+            if (!catString) return "";
+
+            return catString.split(",").map(n => categories[parseInt(n.trim(), 10) - 1]).filter(Boolean).join(", ");
+
+        }
+
+        function renderCards() {
+
+            cards.innerHTML = "";
+
+            contributors.forEach(c => {
+
+                cards.innerHTML += `
+
+<div class="card" data-region="${c.region}">
+
+<div class="name">${c.name}</div>
+
+<div class="info"><b>Affiliation:</b> ${c.affiliation}</div>
+
+<div class="info"><b>Status:</b> ${c.semester}</div>
+
+<div class="badges">
+
+<span class="badge region">${c.region}</span>
+
+${c.category ? `<span class="badge category" title="${categoryNames(c.category)}">Category ${c.category}</span>` : ''}
+
+<span class="badge uni">${c.affiliation}</span>
+
+</div>
+
+</div>
+
+`;
+
+            });
+
+        }
+
+        renderCards();
+
+        // ---- Circular region wheel ----
+
+        const wheel = document.getElementById("wheel");
+        const centerNode = document.getElementById("centerNode");
+        const wheelRadius = 120;
+        const wheelCenter = 160;
+
+        regions.forEach((r, i) => {
+
+            const angle = (-90 + i * (360 / regions.length)) * (Math.PI / 180);
+            const x = wheelCenter + wheelRadius * Math.cos(angle);
+            const y = wheelCenter + wheelRadius * Math.sin(angle);
+
+            const node = document.createElement("div");
+            node.className = "region-node";
+            node.style.left = x + "px";
+            node.style.top = y + "px";
+            node.textContent = r;
+            node.id = "node-" + r;
+            node.onclick = () => selectRegion(r);
+
+            wheel.appendChild(node);
+
+        });
+
+        function selectRegion(region) {
+
+            activeRegion = region;
+
+            document.querySelectorAll(".region-node").forEach(n => n.classList.remove("active"));
+            centerNode.classList.remove("active");
+
+            if (region) {
+
+                document.getElementById("node-" + region).classList.add("active");
+                centerNode.innerHTML = region;
+
+            } else {
+
+                centerNode.classList.add("active");
+                centerNode.innerHTML = "All<br>Regions";
+
+            }
+
+            applyFilters();
+
+        }
+
+        function applyFilters() {
+
+            const searchTerm = document.getElementById("search").value.toLowerCase();
+            const card = document.getElementsByClassName("card");
+            let visibleCount = 0;
+
+            for (let i = 0; i < card.length; i++) {
+
+                const matchesSearch = card[i].innerText.toLowerCase().includes(searchTerm);
+                const matchesRegion = !activeRegion || card[i].dataset.region === activeRegion;
+                const show = matchesSearch && matchesRegion;
+
+                card[i].style.display = show ? "block" : "none";
+
+                if (show) visibleCount++;
+
+            }
+
+            emptyMsg.style.display = visibleCount === 0 ? "block" : "none";
+
+        }
+
+        function searchCard() {
+
+            applyFilters();
+
+        }
+
+        // ---- Modal ----
+
+        function openModal(type) {
+
+            const overlay = document.getElementById("modalOverlay");
+            const title = document.getElementById("modalTitle");
+            const list = document.getElementById("modalList");
+
+            list.innerHTML = "";
+
+            if (type === "category") {
+
+                title.textContent = "Speech Categories (19)";
+
+                categories.forEach((c, i) => {
+
+                    const li = document.createElement("li");
+                    li.innerHTML = `<span class="num">${i + 1}.</span> ${c}`;
+                    list.appendChild(li);
+
+                });
+
+            } else if (type === "region") {
+
+                title.textContent = "Regional Dialects (5)";
+
+                regions.forEach((r, i) => {
+
+                    const li = document.createElement("li");
+                    li.classList.add("clickable");
+                    li.innerHTML = `<span class="num">${i + 1}.</span> ${r}`;
+                    li.onclick = () => {
+
+                        selectRegion(r);
+                        closeModal();
+
+                    };
+                    list.appendChild(li);
+
+                });
+
+            }
+
+            overlay.classList.add("open");
+
+        }
+
+        function closeModal() {
+
+            document.getElementById("modalOverlay").classList.remove("open");
+
+        }
+
+        function closeModalOutside(e) {
+
+            if (e.target.id === "modalOverlay") closeModal();
+
+        }
+
+    </script>
+
+</body>
+
+</html>
