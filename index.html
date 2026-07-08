@@ -183,6 +183,73 @@
 
         }
 
+        .team-card.expert {
+
+            border-color: rgba(234, 88, 12, .4);
+            width: 195px;
+            padding: 20px 14px;
+
+        }
+
+        .team-card.expert .team-role {
+
+            background: rgba(234, 88, 12, .18);
+            color: #fb923c;
+
+        }
+
+        .team-card.expert.no-avatar .team-name {
+
+            font-size: 15px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+
+        }
+
+        .team-card.expert .team-role {
+
+            font-size: 11px;
+            padding: 3px 10px;
+            margin-bottom: 8px;
+
+        }
+
+        .team-card.expert .info {
+
+            font-size: 12px;
+            margin: 2px 0;
+
+        }
+
+        .team-card.expert .responsibility {
+
+            font-size: 11px;
+            margin-top: 8px;
+            line-height: 1.3;
+
+        }
+
+        .experts-row {
+
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: center;
+            gap: 16px;
+            padding-bottom: 6px;
+
+        }
+
+        @media (max-width: 900px) {
+
+            .experts-row {
+
+                flex-wrap: wrap;
+                overflow-x: visible;
+
+            }
+
+        }
+
         .avatar {
 
             width: 96px;
@@ -206,6 +273,13 @@
             height: 108px;
             border-color: rgba(74, 222, 128, .5);
             background: linear-gradient(135deg, #16a34a, #2563eb);
+
+        }
+
+        .team-card.expert .avatar {
+
+            background: linear-gradient(135deg, #ea580c, #9333ea);
+            border-color: rgba(234, 88, 12, .5);
 
         }
 
@@ -243,6 +317,16 @@
             font-size: 13px;
             opacity: .85;
             margin: 3px 0;
+
+        }
+
+        .team-card .responsibility {
+
+            font-size: 12px;
+            opacity: .7;
+            margin-top: 10px;
+            font-style: italic;
+            line-height: 1.4;
 
         }
 
@@ -680,7 +764,8 @@
 
         <a class="top-link-btn journal" href="#" target="_blank" rel="noopener">📘 Dataset Paper (Journal)</a>
 
-        <a class="top-link-btn dataset" href="https://data.mendeley.com/datasets/777wsgjgtm/1" target="_blank" rel="noopener">🔗 Dataset Link</a>
+        <a class="top-link-btn dataset" href="https://data.mendeley.com/datasets/777wsgjgtm/1" target="_blank"
+            rel="noopener">🔗 Dataset Link</a>
 
     </div>
 
@@ -713,6 +798,14 @@
             <div class="team-group-title">Authors</div>
 
             <div class="team-row" id="authors"></div>
+
+        </div>
+
+        <div class="team-group">
+
+            <div class="team-group-title">Language Experts</div>
+
+            <div class="team-row experts-row" id="experts"></div>
 
         </div>
 
@@ -831,7 +924,7 @@
                 uni: "University of Asia Pacific",
                 location: "Dhaka, Bangladesh",
                 email: "tasnim.jahin@uap-bd.edu",
-                image: "Images/pic.png"
+                image: "Images/pic/pic.png"
             }
 
         ];
@@ -845,7 +938,7 @@
                 uni: "University of Asia Pacific",
                 location: "Dhaka, Bangladesh",
                 email: "22201240@uap-bd.edu",
-                image: "Images/IMG_9270 9.jpg"
+                image: "Images/IMG_9270 9 (1).jpg"
             },
 
             {
@@ -866,6 +959,53 @@
                 location: "Dhaka, Bangladesh",
                 email: "22201239@uap-bd.edu",
                 image: ""
+            }
+
+        ];
+
+        // ---- Language Experts (dialect verification) ----
+        // No images by design — initials avatar only.
+
+        const languageExperts = [
+
+            {
+                name: "Humaira Jihan Arpita",
+                region: "Barishal",
+                studentId: "22201244",
+                uni: "University of Asia Pacific",
+                responsibility: "Verification of Barishal dialect recordings"
+            },
+
+            {
+                name: "Shadman Sarwer",
+                region: "Chittagong",
+                studentId: "22201242",
+                uni: "University of Asia Pacific",
+                responsibility: "Verification of Chittagong dialect recordings"
+            },
+
+            {
+                name: "Abdullah Al Jubayer",
+                region: "Noakhali",
+                studentId: "22201245",
+                uni: "University of Asia Pacific",
+                responsibility: "Verification of Noakhali dialect recordings"
+            },
+
+            {
+                name: "Muhtasin Towkir",
+                region: "Rangpur",
+                studentId: "22201258",
+                uni: "University of Asia Pacific",
+                responsibility: "Verification of Rangpur dialect recordings"
+            },
+
+            {
+                name: "Indana Jaman",
+                region: "Sylhet",
+                studentId: "22201235",
+                uni: "University of Asia Pacific",
+                responsibility: "Verification of Sylhet dialect recordings"
             }
 
         ];
@@ -912,8 +1052,33 @@
 
         }
 
+        function renderExperts(list, containerId) {
+
+            const el = document.getElementById(containerId);
+
+            el.innerHTML = list.map(p => `
+
+<div class="team-card expert no-avatar">
+
+<div class="team-name">${p.name}</div>
+
+<div class="team-role">${p.region} Language Expert</div>
+
+<div class="info"><b>Student ID:</b> ${p.studentId}</div>
+
+<div class="info">${p.uni}</div>
+
+<div class="responsibility">${p.responsibility}</div>
+
+</div>
+
+`).join("");
+
+        }
+
         renderTeam(supervisors, "supervisors", "lead");
         renderTeam(authors, "authors", "");
+        renderExperts(languageExperts, "experts");
 
         const regions = ["Barishal", "Chittagong", "Noakhali", "Rangpur", "Sylhet"];
 
@@ -947,32 +1112,32 @@
                 name: "Abrar Hisam",
                 region: "Barishal",
                 affiliation: "University of Asia Pacific",
-                semester: "2nd Year • 2nd Semester",
-                category: "1,2"
+                
+                category: "1, 2"
             },
 
             {
                 name: "Abdullah As Sami Taseen",
                 region: "Chittagong",
                 affiliation: "University of Asia Pacific",
-                semester: "2nd Year • 1st Semester",
-                category: "16,17"
+                
+                category: "16, 17"
             },
 
             {
                 name: "Mizanur Rahman (Sowrov)",
                 region: "Noakhali",
                 affiliation: "University of Asia Pacific",
-                semester: "2nd Year • 1st Semester",
-                category: "15,16"
+                
+                category: "15, 16"
             },
 
             {
                 name: "Abidur Rahman Shaan",
                 region: "Noakhali",
                 affiliation: "University of Asia Pacific",
-                semester: "2nd Year • 2nd Semester",
-                category: "3,15"
+                
+                category: "3, 15"
             },
 
             {
@@ -987,7 +1152,7 @@
                 name: "Md. Inan Sadman",
                 region: "Noakhali",
                 affiliation: "University of Asia Pacific",
-                semester: "1st Year • 2nd Semester",
+                
                 category: "6"
             },
 
@@ -995,7 +1160,7 @@
                 name: "Labiba Binte Helal",
                 region: "Barishal",
                 affiliation: "University of Asia Pacific",
-                semester: "2nd Year • 1st Semester",
+                
                 category: "3"
             },
 
@@ -1003,15 +1168,15 @@
                 name: "Abdullah Bin Hossain",
                 region: "Chittagong",
                 affiliation: "University of Asia Pacific",
-                semester: "4th Year • 1st Semester",
-                category: "7,8"
+                
+                category: "7, 8"
             },
 
             {
                 name: "MD Mozahidul Islam",
                 region: "Rangpur",
-                affiliation: "BBA Student",
-                semester: "3rd Year",
+                affiliation: "IUBAT",
+                
                 category: "7"
             },
 
@@ -1019,281 +1184,281 @@
                 name: "Abdullah Al Jubayer",
                 region: "Noakhali",
                 affiliation: "University of Asia Pacific",
-                semester: "4th Year",
-                category: "11,12"
+                
+                category: "11, 12"
             },
 
             {
-                name: "Shadman",
+                name: "Shadman Sarwer",
                 region: "Chittagong",
                 affiliation: "BUET",
-                semester: "4th Year"
+                category: "9, 10"
             },
 
             {
-                name: "Mafuj",
+                name: "Mafuj Alom",
                 region: "Barishal",
                 affiliation: "Daffodil International University",
-                semester: "3rd Year"
+                category: "7, 8, 9"
             },
 
             {
-                name: "Firoj",
+                name: "Firoj Mollah",
                 region: "Chittagong",
                 affiliation: "IUBAT",
-                semester: "1st Year"
+                category: "11, 12"
             },
 
             {
-                name: "Porag",
+                name: "Porag Ahmed",
                 region: "Sylhet",
-                affiliation: "Software Engineer",
-                semester: "Working Professional"
+                affiliation: "Business Man",
+                category: "1, 2"
             },
 
             {
-                name: "Amin",
+                name: "Amin Alom",
                 region: "Rangpur",
-                affiliation: "BBA Student",
-                semester: "2nd Year"
+                affiliation: "Brac University",
+                category: "4, 5"
             },
 
             {
-                name: "Hasnain",
+                name: "Ummai Hasnain",
                 region: "Chittagong",
                 affiliation: "University of Asia Pacific",
-                semester: "4th Year"
+                category: "14, 15"
             },
 
             {
-                name: "Solimullah",
+                name: "Ahmed Solimullah",
                 region: "Sylhet",
-                affiliation: "University of Kent, UK",
-                semester: "Graduate Student"
+                affiliation: "Brac University",
+                category: "3, 4"
             },
 
             {
                 name: "Mahmud Hasan Sabbir",
                 region: "Rangpur",
                 affiliation: "Jagannath University",
-                semester: "3rd Year"
+                category: "8, 9"
             },
 
             {
                 name: "Prapti Das",
                 region: "Noakhali",
                 affiliation: "Jagannath University",
-                semester: "4th Year"
+                category: "14, 17"
             },
 
             {
-                name: "Safa",
+                name: "Safa Kabir",
                 region: "Barishal",
                 affiliation: "Jagannath University",
-                semester: "2nd Year"
+                category: "16, 17"
             },
 
             {
-                name: "Sweety",
+                name: "Sweety Sultana",
                 region: "Rangpur",
                 affiliation: "Jagannath University",
-                semester: "2nd Year"
+                category: "14, 15"
             },
 
             {
-                name: "Jhilik",
+                name: "Jhilik Binu",
                 region: "Barishal",
                 affiliation: "Jagannath University",
-                semester: "3rd Year"
+                category: "14, 15"
             },
 
             {
-                name: "Sohel",
+                name: "Sohel Rana",
                 region: "Sylhet",
                 affiliation: "University of Dhaka",
-                semester: "3rd Year"
+                category: "10, 11"
             },
 
             {
-                name: "Humaira",
+                name: "Humaira Sheikh",
                 region: "Rangpur",
                 affiliation: "University of Dhaka",
-                semester: "4th Year"
+                category: "16, 17"
             },
 
             {
-                name: "Taniya",
+                name: "Taniya Molla",
                 region: "Barishal",
                 affiliation: "University of Dhaka",
-                semester: "3rd Year"
+                category: "10, 11"
             },
 
             {
-                name: "Tanim",
+                name: "Tanim Ahmed",
                 region: "Barishal",
-                affiliation: "Alumni, University of Asia Pacific",
-                semester: "Graduate"
+                affiliation: "Alumni, North South University",
+                category: "4, 5, 6"
             },
 
             {
-                name: "Anuva",
+                name: "Anuva Mondol",
                 region: "Sylhet",
                 affiliation: "University of Dhaka",
-                semester: "2nd Year"
+                category: "8, 9"
             },
 
             {
-                name: "Shofiq",
+                name: "Shofiq Islam",
                 region: "Barishal",
-                affiliation: "University of Dhaka",
-                semester: "4th Year"
+                affiliation: "Business Man",
+                category: "12, 13"
             },
 
             {
                 name: "Saber Riyad",
                 region: "Noakhali",
                 affiliation: "BUET",
-                semester: "3rd Year"
+                category: "13, 19"
             },
 
             {
                 name: "Masum Sheikh",
                 region: "Chittagong",
                 affiliation: "BRAC University",
-                semester: "2nd Year"
+                category: "2"
             },
 
             {
                 name: "Morshed Alom",
                 region: "Chittagong",
-                affiliation: "North South University",
-                semester: "4th Year"
+                affiliation: "Employee, Local Company",
+                category: "4"
             },
 
             {
                 name: "MA Mahim",
                 region: "Noakhali",
-                affiliation: "Daffodil International University",
-                semester: "3rd Year"
+                affiliation: "University of Dhaka",
+                category: "18"
             },
 
             {
                 name: "Abdullah Al Rafi",
                 region: "Chittagong",
                 affiliation: "BRAC University",
-                semester: "2nd Year"
+                category: "1"
             },
 
             {
                 name: "MD Juboraj",
                 region: "Chittagong",
                 affiliation: "University of Dhaka",
-                semester: "3rd Year"
+                category: "3"
             },
 
             {
-                name: "Mohiuddin",
+                name: "Mohiuddin Sheikh",
                 region: "Chittagong",
                 affiliation: "BUET",
-                semester: "Graduate Student"
+                category: "6"
             },
 
             {
                 name: "Shahidul Islam Raihan",
                 region: "Chittagong",
-                affiliation: "Research Assistant",
-                semester: "Working Professional"
+                affiliation: "Business Man",
+                category: "13, 18, 19"
             },
 
             {
                 name: "Tanvir Islam Tuhin",
                 region: "Chittagong",
-                affiliation: "Software Engineer",
-                semester: "Working Professional"
+                affiliation: "BUET",
+                category: "5"
             },
 
             {
-                name: "Atifa",
+                name: "Atifa Sultana",
                 region: "Noakhali",
                 affiliation: "North South University",
-                semester: "2nd Year"
+                category: "4, 8, 9, 10"
             },
 
             {
                 name: "KM Fahim",
                 region: "Noakhali",
-                affiliation: "BRAC University",
-                semester: "3rd Year"
+                affiliation: "Employee, Local Company",
+                category: "1, 2, 7"
             },
 
             {
                 name: "Tanvir Alamgir",
                 region: "Noakhali",
-                affiliation: "University of Dhaka",
-                semester: "Graduate Student"
+                affiliation: "University of Asia Pacific",
+                category: "4, 5"
             },
 
-            {
-                name: "Sohel",
+            { 
+                name: "Sohel Matubor",
                 region: "Barishal",
                 affiliation: "Jagannath University",
-                semester: "4th Year"
+                category: "18, 19"
             },
 
             {
                 name: "Jati Basu",
                 region: "Rangpur",
-                affiliation: "Pabna University",
-                semester: "3rd Year"
+                affiliation: "Employee, Local Company",
+                category: "10, 11"
             },
 
             {
                 name: "Mim",
                 region: "Sylhet",
                 affiliation: "Islamic University",
-                semester: "2nd Year"
+                category: "12, 13"
             },
 
             {
-                name: "Ridwan",
+                name: "Ridwan Ahmed",
                 region: "Sylhet",
                 affiliation: "BUET",
-                semester: "4th Year"
+                category: "5, 6, 7"
             },
 
             {
                 name: "Rownok Hasan",
                 region: "Rangpur",
                 affiliation: "NITER",
-                semester: "3rd Year"
+                category: "12, 13"
             },
 
             {
-                name: "Tushto",
+                name: "MD. Tushto",
                 region: "Sylhet",
                 affiliation: "BUET",
-                semester: "Graduate Student"
+                category: "17, 18, 19"
             },
 
             {
-                name: "Shafee",
+                name: "Shafee Alom",
                 region: "Sylhet",
                 affiliation: "BUET",
-                semester: "Graduate Student"
+                category: "14, 15, 16"
             },
 
             {
-                name: "Nayeem",
+                name: "Nayeem Hasan",
                 region: "Rangpur",
-                affiliation: "Data Analyst",
-                semester: "Working Professional"
+                affiliation: "NITER",
+                category: "3, 6"
             },
 
             {
                 name: "Mahin",
                 region: "Rangpur",
-                affiliation: "Machine Learning Engineer",
-                semester: "Working Professional"
+                affiliation: "Employee, Local Company",
+                category: "18, 19"
             }
 
         ];
@@ -1324,7 +1489,7 @@
 
 <div class="info"><b>Affiliation:</b> ${c.affiliation}</div>
 
-<div class="info"><b>Status:</b> ${c.semester}</div>
+
 
 <div class="badges">
 
